@@ -9,19 +9,17 @@ import org.testng.annotations.BeforeClass;
 
 
 public class StartFinishFixture {
-
-        public static WebDriver driver;
-        public static WebDriverWait wait;
+    BaseCommands bc = new BaseCommands();
 
         @BeforeClass
-        public void startFixture() {
-            driver = new ChromeDriver();
-            wait = new WebDriverWait(driver, 15);
+        public void setUp() {
+            bc.init();
         }
 
-        @AfterClass
-        public void finishFixture(){
-            driver.quit();
-        }
+    @AfterClass
+        public void tearDown(){
+        bc.stop();
     }
+
+}
 
