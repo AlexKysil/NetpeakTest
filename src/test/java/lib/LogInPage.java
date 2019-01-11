@@ -6,7 +6,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
 public class LogInPage extends BaseCommands {
-BaseCommands bc = new BaseCommands();
+    BaseCommands bc = new BaseCommands();
+    String expectedError = "Invalid credentials.";
 
     public void NavigateToLogInPage(){
         bc.OpenNetpeakWebSite();
@@ -24,6 +25,8 @@ BaseCommands bc = new BaseCommands();
          String msg = bc.driver.findElement(By.xpath("//div[@class='alert alert-danger text-center']")).getText();
          return msg;
     }
+    public String getExpectedError() {
+        return expectedError;
+    }
 
-    // expected msg "Invalid credentials."
 }
