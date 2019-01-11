@@ -6,8 +6,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
 public class LogInPage extends BaseCommands {
-    BaseCommands bc = new BaseCommands();
+    public BaseCommands bc = new BaseCommands();
     String expectedError = "Invalid credentials.";
+    String expectedLoggedInPageTitle = "Панель управления – Netpeak Software";
 
     public void NavigateToLogInPage(){
         bc.OpenNetpeakWebSite();
@@ -27,6 +28,14 @@ public class LogInPage extends BaseCommands {
     }
     public String getExpectedError() {
         return expectedError;
+    }
+
+    public String getExpectedLoggedInPageTitle() {
+        return expectedLoggedInPageTitle;
+    }
+    public String getActualPageTitle(){
+        waitForElementInPageLoaded("//h1[contains(text(),'Панель управления')]");
+        return bc.getPageTitle();
     }
 
 }
