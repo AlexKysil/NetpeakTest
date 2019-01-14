@@ -1,26 +1,26 @@
 package helpClasses;
 
 public class logInUser {
-    String username;
-    String pass;
+    String email;
+    String password;
 
-    public logInUser(String username, String pass){
-        this.username = username;
-        this.pass = pass;
+    public logInUser(String email, String password){
+        this.email = email;
+        this.password = password;
     }
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setEmail(String email) {
+        this.email = email;
     }
     public String getPass() {
-        return pass;
+        return password;
     }
 
-    public void setPass(String pass) {
-        this.pass = pass;
+    public void setPass(String password) {
+        this.password = password;
     }
 
 }

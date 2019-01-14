@@ -20,9 +20,13 @@ public class RegistrationPage extends BaseCommands {
     }
 
     public void FillInRegistrationFormAndSubmit(registrationUser user){
+        bc.driver.findElement(By.xpath("//input[@id='fos_user_registration_form_firstName']")).clear();
         bc.driver.findElement(By.xpath("//input[@id='fos_user_registration_form_firstName']")).sendKeys(user.getFirstName());
+        bc.driver.findElement(By.xpath("//input[@id='fos_user_registration_form_lastName']")).clear();
         bc.driver.findElement(By.xpath("//input[@id='fos_user_registration_form_lastName']")).sendKeys(user.getLastName());
+        bc.driver.findElement(By.xpath("//input[@type='email']")).clear();
         bc.driver.findElement(By.xpath("//input[@type='email']")).sendKeys(user.getEmail());
+        bc.driver.findElement(By.xpath("//input[@type='password']")).clear();
         bc.driver.findElement(By.xpath("//input[@type='password']")).sendKeys(user.getPass());
         if(user.isCheckboxesIsSelected()) {
             bc.driver.findElement(By.xpath("//input[@type='checkbox' and @id='fos_user_registration_form_termsOfUse']")).click();

@@ -1,0 +1,30 @@
+[
+  {
+    "firstName": "",
+    "lastName": "",
+    "email": "valid@gmail.com",
+    "password": "123456",
+    "checkboxesIsSelected": "true"
+  },
+  {
+    "firstName": "SomeName",
+    "lastName": "SomeLastName",
+    "email": "",
+    "password": "123456",
+    "checkboxesIsSelected": "true"
+  },
+  {
+    "firstName": "",
+    "lastName": "",
+    "email": "valid@gmail.com",
+    "password": "123456",
+    "checkboxesIsSelected": "false"
+  },
+  {
+    "firstName": "SomeName",
+    "lastName": "SomeLastName",
+    "email": "valid@gmail.com",
+    "password": "123456",
+    "checkboxesIsSelected": "false"
+  }
+]

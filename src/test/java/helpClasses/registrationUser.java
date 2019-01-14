@@ -4,15 +4,21 @@ public class registrationUser {
     String firstName;
     String lastName;
     String email;
-    String pass;
+    String password;
     boolean checkboxesIsSelected;
 
-    public registrationUser(String firstName, String lastName, String email, String pass, boolean checkboxesIsSelected){
+    public registrationUser(String firstName, String lastName, String email, String password, String checkboxesIsSelected){
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.pass = pass;
-        this.checkboxesIsSelected = checkboxesIsSelected;
+        this.password = password;
+        if(checkboxesIsSelected.equals("true")){
+            this.checkboxesIsSelected = true;
+        }else if(checkboxesIsSelected.equals("false"))
+        {
+            this.checkboxesIsSelected = false;
+        }
+
     }
 
     public String getFirstName() {
@@ -39,11 +45,11 @@ public class registrationUser {
         this.email = email;
     }
     public String getPass() {
-        return pass;
+        return password;
     }
 
     public void setPass(String pass) {
-        this.pass = pass;
+        this.password = password;
     }
 
     public boolean isCheckboxesIsSelected() {

@@ -16,7 +16,9 @@ public class LogInPage extends BaseCommands {
     }
 
     public void FillInLoginFormAndSubmit(logInUser user){
-        bc.driver.findElement(By.xpath("//input[@name='_username']")).sendKeys(user.getUsername());
+        bc.driver.findElement(By.xpath("//input[@name='_username']")).clear();
+        bc.driver.findElement(By.xpath("//input[@name='_username']")).sendKeys(user.getEmail());
+        bc.driver.findElement(By.xpath("//input[@name='_password']")).clear();
         bc.driver.findElement(By.xpath("//input[@name='_password']")).sendKeys(user.getPass());
         bc.driver.findElement(By.xpath("//button[@type='submit']")).click();
     }
