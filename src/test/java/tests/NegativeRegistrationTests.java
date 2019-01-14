@@ -37,6 +37,8 @@ public class NegativeRegistrationTests extends StartFinishFixture {
     @Test(dataProvider = "invalidDataForRegistration")
     public void registrationNagativeCases(registrationUser user){
         rp.navigateToRegistratioPage();
+        System.out.println("User firstname: " + user.getFirstName() + " User lastname: " + user.getLastName() + " User email: "
+        + user.getEmail() + " User password: " + user.getPass());
         rp.FillInRegistrationFormAndSubmit(user);
         if(user.getFirstName().isEmpty()){
             assert(rp.getExpectedErrorForInvalidFirstName().equals(rp.getErrorMSGforInvalidFirstName()));

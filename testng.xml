@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="NetpeakTestTask" verbose="1" >
+    <test name="RegistrationNegativeCases" >
+        <classes>
+            <class name="tests.NegativeRegistrationTests" />
+        </classes>
+    </test>
+
+    <test name="LoginNegativeCases">
+        <classes>
+            <class name="tests.LoginNegativeTests"/>
+        </classes>
+    </test>
+
+    <test name="LoginPositiveCase">
+        <classes>
+            <class name="tests.PositiveLoginTest"/>
+        </classes>
+    </test>
+</suite>

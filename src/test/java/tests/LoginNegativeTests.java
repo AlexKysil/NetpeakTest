@@ -36,6 +36,7 @@ public class LoginNegativeTests extends StartFinishFixture {
     @Test(dataProvider = "invalidDataForLogin")
     public void NegativeLoginCase(logInUser user){
         lp.NavigateToLogInPage();
+        System.out.println("User email: " + user.getEmail() + " User password: " + user.getPass());
         lp.FillInLoginFormAndSubmit(user);
         assert (lp.getExpectedError().equals(lp.getErrorMSGforInvalidCredentials()));
     }

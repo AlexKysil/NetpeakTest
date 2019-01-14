@@ -33,6 +33,7 @@ public class PositiveLoginTest extends StartFinishFixture {
     @Test (dataProvider = "validDataForLogin")
     public void openBrowserTest(logInUser user){
         lp.NavigateToLogInPage();
+        System.out.println("User email: " + user.getEmail() + " User password: " + user.getPass());
         lp.FillInLoginFormAndSubmit(user);
         assert(lp.getExpectedLoggedInPageTitle().equals(lp.getActualPageTitle()));
     }
